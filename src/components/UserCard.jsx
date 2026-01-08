@@ -3,7 +3,7 @@ import { useState } from "react";
 const UserCard = ({ user }) => {
   const [showDetails, setShowDetails] = useState(false);
 
-  // 🛡️ Safety guard (prevents white screen crash)
+  // Safety guard (prevents white screen crash)
   if (!user) return null;
 
   const {
