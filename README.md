@@ -18,13 +18,10 @@ This project demonstrates **frontend fundamentals expected from product-based co
 
 ---
 
-## 📌 Live Demo
+## 📌 Live Website
 
 🔗 **Live URL:**  
 https://loquacious-biscotti-47c1a9.netlify.app
-
-🔗 **GitHub Repository:**  
-https://github.com/Hariharan0946/User-directory
 
 ---
 
@@ -53,8 +50,7 @@ https://github.com/Hariharan0946/User-directory
 **JSONPlaceholder Users API**  
 https://jsonplaceholder.typicode.com/users
 
-yaml
-Copy code
+
 
 ---
 
