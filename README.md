@@ -24,7 +24,21 @@ This project demonstrates **frontend fundamentals expected from product-based co
 https://loquacious-biscotti-47c1a9.netlify.app
 
 ---
+## 📌 Project Objective
 
+The objective of this assignment is to evaluate a candidate’s ability to:
+
+- Build a scalable frontend application
+- Integrate external APIs
+- Handle application state cleanly
+- Design reusable components
+- Implement form validation
+- Deliver a clean, responsive UI
+- Deploy a frontend application to production
+
+This project focuses purely on **frontend engineering** (no backend persistence required)
+
+---
 ## 📦 Features
 
 ### ✅ Core Features
@@ -45,36 +59,90 @@ https://loquacious-biscotti-47c1a9.netlify.app
 
 ---
 
-## 🌐 API Used
+## 🌐 External API Used
 
-**JSONPlaceholder Users API**  
-https://jsonplaceholder.typicode.com/users
+JSON Placeholder Users API
+   https://jsonplaceholder.typicode.com/users
 
-
+This public API is commonly used for frontend prototyping and testing.  
+It provides mock user data with fields like name, email, phone, address, and company.
 
 ---
 
-## 🖥️ Application Screens
+## 📦 Features (Requirement-wise Breakdown)
 
-### 🔹 Add New User
-- Required fields: Name, Email, Phone
-- Optional fields: Website, Company, Address
-- Validation before submission
-- Resets form after successful add
+### 1️⃣ User List Page
+✔ Fetches users from API on page load  
+✔ Displays the following fields:
+- Name
+- Email
+- Phone  
 
-### 🔹 User List
-- Displays users in cards
-- Shows basic info by default
-- Expand to view full details
+✔ Handles:
+- Loading state while data is being fetched
+- Error state if API request fails
 
-### 🔹 Search
-- Filter users by name or email
-- Works in real time without reload
+---
+
+### 2️⃣ Search Users
+✔ Search input provided  
+✔ Filters users by:
+- Name
+- Email  
+
+✔ Real-time filtering  
+✔ Case-insensitive matching  
+✔ No page reload required  
+
+---
+
+### 3️⃣ User Details View
+✔ Each user is displayed in a card  
+✔ On clicking **“Show Details”**, additional information is displayed:
+- Website
+- Company name
+- Address  
+
+✔ Toggle behavior (Show / Hide details)  
+✔ Implemented without navigation for better UX  
+
+---
+
+### 4️⃣ Add New User (Frontend Only)
+✔ A form to add a new user on the frontend  
+✔ Fields:
+- Name (required)
+- Email (required, validated format)
+- Phone (required)
+- Website (optional)
+- Company name (optional)
+- Address (optional)
+
+✔ Input validation:
+- Required field checks
+- Email format validation
+
+✔ On successful submission:
+- User is added to the list immediately
+- Form resets automatically
+
+> ⚠️ Note: No backend persistence is required as per assignment instructions.
+
+---
+
+## 🎨 UI & UX Expectations (Implemented)
+
+✔ Clean, readable layout  
+✔ Card-based UI  
+✔ Proper spacing and alignment  
+✔ Hover & focus states  
+✔ Responsive design (mobile + desktop)  
+✔ Minimal yet professional styling  
 
 ---
 
 ## 📂 Project Structure
-
+```
 user-directory/
 │
 ├── src/
@@ -103,74 +171,78 @@ user-directory/
 ├── package.json
 └── README.md
 
-yaml
-Copy code
+```
 
 ---
 
 ## ⚙️ Setup Instructions (Run Locally)
 
 ### 1️⃣ Clone the repository
-```bash
+```
 git clone https://github.com/Hariharan0946/User-directory.git
 cd user-directory
+```
 2️⃣ Install dependencies
-bash
-Copy code
+```
 npm install
+```
 3️⃣ Start development server
-bash
-Copy code
+```
 npm run dev
-📍 App runs at:
+```
 
-arduino
-Copy code
+## 📍 App runs at:
 http://localhost:5173
-🚀 Deployment (Netlify)
+
+🚀 Deployment Details
+
+Platform: Netlify
+
 Build Command:
-
-arduino
-Copy code
+```
 npm run build
+```
+
 Publish Directory:
-
-nginx
-Copy code
+```
 dist
-Auto-deploy enabled from GitHub main branch
+```
+---
+## 🧠 Architecture & Design Decisions
+### 🔹 Component-Based Architecture
 
-🧠 Design Decisions
-🧩 Component-Based Architecture
-Each UI concern is isolated into reusable components for scalability and maintainability.
+  - Each UI responsibility is isolated into reusable components, making the application easier to scale and maintain.
 
-🔄 State Management with Hooks
-Used useState and useEffect for predictable and clean state handling.
+### 🔹 Hooks-Based State Management
 
-🎯 UX First Approach
-Clear form validation messages
+  - useState for UI and form state
+  
+  - useEffect for API calls
+    
+  - Clean, predictable data flow
 
-Smooth interactions
+### 🔹 Service Layer Pattern
 
-Clean spacing and alignment
+  - API logic is abstracted into userService.js, keeping UI components clean and readable.
 
-🌍 Production Ready
-Built using Vite for fast builds
+### 🔹 UX-First Validation
 
-Deployed with Netlify
+  - Form validation ensures users receive immediate and clear feedback, improving usability.
 
-No runtime errors in production
+---
 
-🧪 Testing
-✔ Manual testing across components
-✔ Form validation tested
-✔ API error handling verified
-✔ Mobile & desktop responsiveness checked
+## 🧪 Testing
 
-👨‍💻 Author
-Hariharan Balasubramaniyam
-Frontend / Backend Developer
-React | JavaScript | Python | Django
+  -  Manual testing across components
+  -  Form validation tested
+  -  API error handling verified
+  -  Mobile & desktop responsiveness checked
 
-📧 Email: steverogers0946@gmail.com
-🔗 GitHub: https://github.com/Hariharan0946
+---
+## 👨‍💻 Author
+### Hariharan Balasubramaniyam
+
+
+
+
+
