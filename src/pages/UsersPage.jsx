@@ -11,7 +11,7 @@ const UsersPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // 🔹 Load users (localStorage first, else API)
+  // Load users (localStorage first, else API)
   useEffect(() => {
     const loadUsers = async () => {
       try {
@@ -36,14 +36,14 @@ const UsersPage = () => {
     loadUsers();
   }, []);
 
-  // 🔹 Persist users to localStorage
+  //  Persist users to localStorage
   useEffect(() => {
     if (users.length > 0) {
       localStorage.setItem("users", JSON.stringify(users));
     }
   }, [users]);
 
-  // 🔹 Add new user (frontend only)
+  //  Add new user (frontend only)
   const handleAddUser = (newUser) => {
     setUsers((prevUsers) =>
       [...prevUsers, newUser].sort((a, b) =>
