@@ -4,7 +4,7 @@ const UserList = ({ users = [], search = "" }) => {
   // SAFETY: ensure users is always an array
   if (!Array.isArray(users)) return null;
 
-  // 🔍 Filter users by name or email (real-time)
+  //  Filter users by name or email (real-time)
   const filteredUsers = users.filter((user) => {
     if (!user) return false;
 
