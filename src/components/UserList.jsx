@@ -1,7 +1,7 @@
 import UserCard from "./UserCard";
 
 const UserList = ({ users = [], search = "" }) => {
-  // ✅ SAFETY: ensure users is always an array
+  // SAFETY: ensure users is always an array
   if (!Array.isArray(users)) return null;
 
   // 🔍 Filter users by name or email (real-time)
@@ -15,7 +15,7 @@ const UserList = ({ users = [], search = "" }) => {
     return name.includes(query) || email.includes(query);
   });
 
-  // ❌ No users found
+  // No users found
   if (filteredUsers.length === 0) {
     return <p>No users found.</p>;
   }
